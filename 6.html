@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>轮播</title>
+	<script type="text/javascript" src="am.js"></script>
+	<style type="text/css">
+body{
+	background-color: #f8f7f6;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+a
+{
+	text-decoration: none;
+}
+.box{
+	width: 810px;
+	height: 360px;
+	border: 1px solid red;
+	/*margin: 100px auto;*/
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+.slider{
+	width: 6480px;
+	position: absolute;
+	left: -810px;
+	float: left;
+}
+.slide{
+	width: 810px;
+	overflow: hidden;
+	float: left;
+}
+.box>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+	top: 175px;
+	line-height: 50px;
+	background: rgb(255,0,0);
+	font-size: 30px;
+	position: absolute;
+	/* display: none; */
+	opacity: 0;
+}
+#left{
+	left: 30px;
+}
+#right{
+	right: 30px;
+}
+.nav{
+	position: absolute;
+	left: 330px;
+	bottom: 20px;
+}
+.nav>li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	cursor: pointer;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+.nav .active{
+	background: red;
+}   
+.bang{
+	
+	font-size: 10px;
+	color: #9a9791;
+	margin-right: 300px;
+	float: left;
+} 
+.da{
+	height: 550px;
+	width: 1185px;
+	margin: 0 auto;
+}
+.biao{
+	margin-right: 20px;
+	float: left;
+}
+.zi{
+	margin-right: 20px;
+	float: left;
+	font-size: 10px;
+	color:  #9a9791;
+	margin-top: 5px;
+}
+.biao1{
+	float: left;
+	margin-top: 5px;
+}
+.o{
+	color: #fe6c00;
+	font-size: 15px;
+}
+.logo{
+	float: left;
+}
+.top{
+	width: 1185px;
+	height: 40px;
+	background-color: white;
+	margin: 0 auto;
+
+}
+.z{
+	height: 38px;
+	width: 500px;
+	float: left;
+	border: solid 1px;
+	border-color: #fe6c00;
+	margin-top: 20px;
+	margin-left: 108px;
+}
+.button{
+	width: 80px;
+    height: 40px;
+    background-color: #fe6c00;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    float: left;
+}
+.a{
+	float: left;
+	margin-top: 20px;
+	margin-left: 90px;
+}
+.b{
+	width: 85px;
+	height: 40px;
+	color: white;
+	float: left;
+	background-color:#fe6c00;
+	margin-top: 30px;
+	font-size: 12px; 
+}
+.c{
+	margin-top: 10px;
+	margin-left: 10px;
+
+}
+#top1{
+	width: 1185px;
+	height: 94px;
+	margin: 0 auto;
+	background-color: white;
+}
+.orange{
+	font-size: 10px;
+	color: orange;
+	border-right:solid 1px;
+	float: left;
+	margin-top: 5px;
+	padding-right: 10px;
+	margin-left: 10px;
+}
+.d{
+	font-size: 10px;
+	border-right: solid 1px;
+	float: left;
+	padding-right: 10px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.d1{
+	font-size: 10px;
+	float: left;
+	padding-right: 10px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.wb{
+	width: 582px;
+	height: 28px;
+	float: left;
+	margin-left: 110px;
+
+}
+.fxw-ul{
+	width: 1000px;
+	height: 40px;
+	/*margin: 0 auto;*/
+	/*margin-left: 159px;*/
+
+	float: left;
+}
+.fxw-zi{
+	color: white;
+	font-size: 16px;
+	
+}
+.fxw-lb{
+	width: 1000px;
+	height: 40px;	
+	float: left;
+}
+.fxw-fuhao{
+	float: left;
+	/*margin-left: 10px;*/
+	font-size: 16px;
+	height: 30px;
+	width: 120px;
+	padding-top: 10px;
+	text-align: center;
+}
+.fxw-zi1{
+	
+	font-size: 16px;
+	color: white;	
+}
+.fxw-fuhao1{
+	float: left;
+	font-size: 16px;
+	height: 26px;
+	width: 120px;
+	padding-top: 10px;
+	text-align: center;
+	background-color: #fe0d4a;
+
+}
+.left{
+	height: 423px;
+	width: 168px;
+	float: left;
+
+}
+.black{
+	height: 423px;
+	width: 27px;
+	float: left;
+	background-color: #4c4c4a;
+
+}
+.wz{
+	margin-top: 15px;
+	margin-left: 12px;
+	font-size: 11px;
+	float: left;
+}
+.e{
+	color: #fe6c00;
+	font-size: 16px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+.e1{
+	
+	font-size: 16px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-top: 20px
+}
+
+#right1{
+	height: 549px;
+	width: 200px;
+
+	float: right;
+}
+.f{
+	float: right;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+#top2{
+	height: 185px;
+	/*width: 100%;*/
+	background-color: white;
+	margin: 0 auto;
+	z-index: 99999;
+}
+.dax{
+	width: 1188px;
+	height: 343px;
+	
+	float: left;
+}
+.daxx{
+	width: 1188px;
+	height: 400px;
+	margin: 0 auto;
+}
+.wbk1{
+	width: 1028px;
+	height: 180px;
+	float: left;
+	border-bottom: solid 1px;
+	border-bottom-color: #ebeae8
+}
+.tu{
+	float: left;
+}
+.wbk11{
+	height: 182px;
+	width: 211px;
+	float: left;
+}
+.bt1{
+	font-size: 16px;
+	margin-top: 20px;
+	margin-left: 84px;
+}
+.cd1{
+	font-size: 10px;
+	margin-top:  10px;
+	margin-left: 84px;
+	color: 	#656475
+}
+.wbk12{
+	width: 135px;
+	height: 182px;
+	float: left;
+}
+.wbk13{
+	width: 130px;
+	height: 182px;
+	float: left;
+}
+.wbk14{
+	width: 134px;
+	height: 182px;
+	float: left;
+
+}
+.wbk15{
+	width: 126px;
+	height: 182px;
+	float: left;
+
+}
+.wbk16{
+	width: 84px;
+	height: 182px;
+	float: left;
+}
+.bt{
+	font-size: 16px;
+	margin-top: 20px;
+
+}
+.cd{
+	font-size: 10px;
+	margin-top:  10px;
+	color: 	#656475
+
+}
+.erweima{
+	margin-left:38px;	
+	margin-top:24px;
+}
+.y{
+	font-size: 10px;
+	border-right: solid 1px;
+	float: left;
+	padding-right: 10px;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.w{
+	font-size: 10px;
+	border-right: solid 1px;
+	float: left;
+	padding-right: 10px;
+	margin-top: 30px;
+	margin-left: 260px;
+}
+.di{
+	float: left;
+	margin-top: 10px;
+}
+.di1{
+	float: left;
+	margin-top: 10px;
+	margin-left: 200px;
+}
+.gonggao{
+	width: 210px;
+	height: 364px;
+	float: left;
+
+}
+.hei{
+	height: 40px;
+	background-color: black;
+	width: 100%;
+}
+.hei1{
+	height: 42px;
+	width: 1185px;
+	margin: 0 auto;
+}
+.zhong{
+	width: 1182px;
+	height: 633px;
+	background-color: white;
+	margin: 0 auto;
+}
+.shou{
+	width: 1182px;
+	height: 36px;
+	margin: 0 auto;
+}
+.sz{
+	font-size: 13px;
+	margin-top: 10px;
+}
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+#box{position:relative;width: 1182px;
+	height: 633px;
+	background-color: white;
+	margin: 0 auto;}
+#img1{width:400px;height:400px;position:absolute;left:20px;top:20px;border: 1px solid #d0cdc7;}
+#slider{width:150px;height:150px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=40);}
+#img2{position:absolute;left: 425px;top:20px;display:none; width:400px;height:400px;overflow:hidden;}
+#Bimg{position:absolute;left:0;top:0; height: 800px;width: 800px}
+.han{
+	float: left;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-left: 448px;
+}
+.xian{
+	color: #676660;
+	font-size: 10px;
+	margin-top: 10px;
+	margin-left:448px; 
+	float: left;
+}
+.jia{
+	font-size: 12px;
+	margin-left: 473px;
+	float: left;
+	margin-top: 30px;
+
+}
+.a{
+	font-size: 16px;
+	color: red;
+	float: left;
+	margin-left: 40px;
+	margin-top:30px;
+}
+.bb{
+	text-decoration: line-through;
+	margin-left: 20px;
+	font-size: 12px;
+	float: left;
+	margin-top: 32px;
+}
+
+.hui{
+	width: 504px;
+	height: 77px;
+	float: left;
+	margin-left: 448px;
+	margin-top: 10px;
+}
+.right2{
+	height: 630px;
+	width: 188px;
+	float: right;
+	background-color: #f7f6f5;
+	margin-top: 0px;
+}
+.hua{
+	margin-left: 473px;
+	margin-top: 20px;
+	font-size: 16px;
+	float: left;
+}
+#ml1{
+	height: 31px;
+	width: 66px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 12px;
+	text-align: center;
+}
+#ml2{
+	height: 31px;
+	width: 66px;
+	float: left;
+	margin-top: 20px;
+	font-size: 12px;
+	text-align: center;
+	margin-right: 250px;
+}
+
+.f{
+	float: right;
+	margin-left: 15px;
+}
+ul,
+            li {
+                list-style: none;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            a:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+            
+            a:link {
+                text-decoration: none;
+            }
+            
+            img {
+                vertical-align: middle;
+            }
+            
+            .btn-numbox {
+                overflow: hidden;
+                margin-left: 63px;
+                float: left;
+            }
+            
+            .btn-numbox li {
+                float: left;
+            }
+            
+            .btn-numbox li .number,
+            .kucun {
+                display: inline-block;
+                font-size: 12px;
+                color: #808080;
+                vertical-align: sub;
+            }
+            
+            .btn-numbox .count {
+                overflow: hidden;
+                margin: 0 16px 0 -20px;
+            }
+            
+            .btn-numbox .count .num-jian,
+            .input-num,
+            .num-jia {
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                font-size: 18px;
+                color: #999;
+                cursor: pointer;
+                border: 1px solid #e6e6e6;
+            }
+            .btn-numbox .count .input-num {
+                width: 58px;
+                height: 26px;
+                color: #333;
+                border-left: 0;
+                border-right: 0;
+            }
+
+.pp{
+	float: left;
+	font-size: 16px;
+	margin-left: 476px;
+}
+.xiao{
+	font-size: 12px;
+	float: left;
+	margin-left: 473px;
+	margin-top: 30px;
+}
+.p81{
+	font-size: 16px;
+	color: #ff0754;
+	float: left;
+	margin-left: 50px;
+	margin-top:30px;
+}
+.jian{
+	font-size: 12px;
+	
+	color: black;
+}
+.nin{
+	float: left;
+	margin-left: 562px;
+	font-size: 13px;
+	margin-top: 20px;
+}
+.ml150{
+	color: #fe904f;
+	margin-left: 10px;
+	font-size: 16px;
+}
+#li{
+	background-color: white;
+	float: left;
+	margin-left: 473px;
+	width: 150px;
+	height: 42px;
+	border: solid 1px #ff0754;
+	color:  #ff0754;
+	margin-top: 20px;
+}
+#jia{
+	background-color: #ff0754;
+	color:  white;
+	float: left;
+	width: 150px;
+	height: 42px;
+	border: none;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.btn4{
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+            background-color:#FF1493;
+            float: left;
+            margin-left: 30px;
+            color: white;
+        }
+        .btn3{
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #FF1493;
+            color: red;
+            background-color: white;
+            float: left;
+            margin-left: 30px;
+        }
+        #tcc{
+            text-align: center;
+            background-color: white;
+            border: 3px solid gray;
+           
+        }
+        .close{
+            width: 30px;
+            height: 30px;
+            margin-left: 370px;
+            background-color: white;
+            margin-top: 1px;
+            border: none;
+        }
+        .lit{
+	width: 415px;
+	height: 60px;
+	float: left;
+	
+}
+.litl{
+	width: 25px;
+	height: 65px;
+	float: left;
+	text-align: center;
+	line-height: 55px;
+	border: 1px solid #cbc8c2;
+	color: #cbc8c2;
+}
+.litz{
+	width: 361px;
+	height: 65px;
+	float:left;
+}
+.litr{
+	width: 25px;
+	height: 65px;
+	float: left;
+	text-align: center;
+	line-height: 55px;
+	border: 1px solid #cbc8c2;
+	color: #cbc8c2;
+}
+.imgtu{
+	width: 55px;
+	height: 55px;
+	float: left;
+}
+
+</style>
+</head>
+<body>
+
+	<div class="top">
+		<p class="bang">帮5买，享帮帮</p>
+		<img src="imgs/-20ee0eded2c0fa8c.jpg" alt="" class="biao">
+		<a href=""><p class="zi">登录</p></a>
+		<a href=""><p class="zi">注册</p></a>
+		<img src="imgs/-25f18eb0a4cc0abb.jpg" alt="" class="biao1">
+		<a href=""><p class="zi">消息</p></a>
+		<img src="imgs/dingdan.jpg" alt="" class="biao1">
+		<a href=""><p class="zi">订单</p></a>
+		<a href=""><p class="zi">我的收藏</p></a>
+		<a href=""><p class="zi">帮钻兑换</p></a>
+		<img src="imgs/tp-my-phone.png" alt="" class="biao1">
+		<a href=""><p class="zi">手机版</p></a>
+		<a href=""><p class="zi">帮5淘</p></a>
+		<a href=""><p class="zi">客户服务</p></a>
+		<img src="imgs/gouwuche.jpg" alt="" class="biao1">
+		<a href=""><p class="zi">购物车</p></a>
+		<p class="o">0</p>
+	</div>
+	<div id="top1">
+		<img src="imgs/logo_03.jpg" alt="" class="logo">
+		<input type="text" value="请输入网址或关键字，直通全网，快速帮5购！" class="z" />
+        <button class="button"> 搜全网</button>
+        <img src="imgs/1eaa4474883af1a9.jpg" alt="" class="a">
+        <div class="b">
+        	<p class="c">常见问题</p>
+        </div>
+        <div class="wb">
+        <p class="orange">洗发护发</p>
+        <p class="orange">日本纸尿裤</p>
+        <p class="d">身体乳</p>
+        <p class="d">内衣文胸</p>
+        <p class="d">iPone 6s</p>
+        <p class="d">iPad Air2</p>
+        <p class="d">牛仔裤</p>
+        <p class="d">奶粉</p>
+        <p class="d">防晒霜</p>
+        <p class="d1">伞</p>
+    </div>
+    </div>
+    <div class="hei">
+    <div class="hei1">
+    	<div class="fxw-ul">
+		<ul class="fxw-lb">
+		<li class="fxw-fuhao1">
+			<a href="" class="fxw-zi1">首页</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">热门品牌</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">美妆个户</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">服饰鞋包</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">母婴生活</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">食品保健</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">韩国直邮</a>
+		</li>
+		<li class="fxw-fuhao">
+			<a href="" class="fxw-zi">跨境购</a>
+		</li>
+	</ul>
+	</div>
+	<img src="imgs/ff_03.jpg" alt="" class="t">
+    </div>
+    	
+    </div>
+<div class="shou"><p class="sz">首页>美容护肤/美体/精油>防晒>韩国&nbspRE：CIPE&nbsp水晶清爽防水防晒喷雾SPF50&nbsp150ml/瓶</p></div>    
+<div class="zhong">
+	<div id="box">
+		<div id="img1">
+			<img src="imgs/pp0.jpeg" width="400" height="400"/>
+			<div id="slider"></div>
+		</div>
+
+       		
+    	<div id="img2">
+        	<img src="imgs/pp0.jpeg"  id="Bimg"/>
+   		</div>
+   		<div class="right2">
+   			<img src="imgs/ww_07.jpg" class="f" />
+   		</div>
+   		<p class="han">韩国&nbspRE:CIPE&nbsp水晶清爽防水防晒喷雾SPF50&nbsp150ml/瓶</p>
+   		<p class="xian">【限购3件】&nbsp超透明无痕防晒，防水防汗定妆，保湿降温不黏腻。水晶防晒喷雾，喷后皮</p>
+   		<p class="xian">肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
+   		<p class="jia">价格</p>
+   		<p class="a">￥71</p>
+   		<p class="bb">￥150</p>
+   		<div class="hui">
+   			<img src="imgs/ss_09.jpg" alt="" >
+
+   		</div>
+   		<p class="hua">化妆品净含量</p>
+   		<div id="ml1" onclick="fun()">150ml
+   		<img id="l1">
+   		</div>
+   		<div id="ml2" onclick="fun1()">200ml
+   		<img id="l2">
+   		</div>
+   		<p class="pp">数量</p>
+   		<ul class="btn-numbox">
+            <li><span class="number">-</span></li>
+            <li>
+                <ul class="count">
+                <li><span class="number">&nbsp&nbsp&nbsp&nbsp&nbsp</span></li>
+                    <li><span id="num-jian" class="num-jian">-</span></li>
+                    <li><input type="text" class="input-num" id="input-num" value="0" /></li>
+                    <li><span id="num-jia" class="num-jia">+</span></li>
+                </ul>
+            </li>
+            <li><span class="kucun">（库存:5）</span></li>
+　　　  </ul>
+	<p class="xiao">销量</p>
+	<p class="p81">81<span class="jian">件</span></p>
+	<p class="nin">您已选择<span class="ml150">“150ml”</span></p>
+	<button id="li">立即购买</button>
+	<button id="jia" onclick="showPop('tcc')"o>加入购物车</button>
+	<div class="lit">
+							<div class="litl"><img src="imgs/spanl.jpg"></div>
+							<div class="litz">
+								<div class="imgtu" id="tu1" onmouseover="add()"><img src="imgs/sp0.jpeg"></div>
+								<div class="imgtu" id="tu2"onmouseover="add1()"><img src="imgs/sp1.jpeg"></div>
+							</div>
+							<div class="litr"><img src="imgs/spanr.jpg"></div>
+						</div>
+					</div>
+
+	</div>
+</div>
+
+
+
+<div class="daxx"><img src="imgs/a_07.jpg" alt=""  class="ditu">
+	<div class="dax">
+	<img src="imgs/loginB.jpg" alt="" class="tu">
+	<div class="wbk1">
+		<div class="wbk11">
+			<p class="bt1">购物指南</p>
+			<p class="cd1">如何下单</p>
+			<p class="cd1">帮5购流程</p>
+			<p class="cd1">订单查询</p>
+			<p class="cd1">物流配送</p>
+		</div>
+		<div class="wbk12">
+			<p class="bt">支付相关</p>
+			<p class="cd">支付方式</p>
+			<p class="cd">安全设置</p>
+			<p class="cd">账户信息</p>
+			
+		</div>
+		<div class="wbk13">
+			<p class="bt">售后服务</p>
+			<p class="cd">取消订单</p>
+			<p class="cd">申请售后</p>
+			<p class="cd">退货流程</p>
+			<p class="cd">退款相关</p>
+		</div>
+		<div class="wbk14">
+			<p class="bt">VIP服务</p>
+			<p class="cd">VIP优惠</p>
+			<p class="cd">如何成为VIP</p>
+			<p class="cd">超级帮钻</p>
+		</div>
+		<div class="wbk15">
+			<p class="bt">帮韩品</p>
+			<p class="cd">韩国正品</p>
+			<p class="cd">闪电发货</p>
+			<p class="cd">帮韩品售后</p>
+		</div>
+		<div class="wbk16">
+			<p class="bt">更多</p>
+			<p class="cd">手机APP</p>
+			<p class="cd">帮5采APP</p>
+			<p class="cd">帮5淘插件</p>
+			<p class="cd">其他</p>
+		</div>
+		<img src="imgs/erweima.jpg" alt="" class="	erweima">
+	</div>
+
+        <p class="w">关于帮5买</p>
+        <p class="y">联系我们</p>
+        <p class="y">合作商家</p>
+        <p class="y">友情链接</p>
+        <p class="y">加入我们</p>
+        <p class="y">移动应用</p>
+        <p class="y">热门</p>
+        <p class="y">广告联盟</p>
+        <p class="y">使用条款</p>        
+  <img src="imgs/7_08.jpg" alt="" class="di">
+  <img src="imgs/bo1.gif" alt="" class="di1">
+  <img src="imgs/bo2.png" alt="" class="di">
+  <img src="imgs/bo3.gif" alt="" class="di">
+  <img src="imgs/bo4.png" alt="" class="di">
+  <img src="imgs/bo5.png" alt="" class="di">
+  <img src="imgs/bo6.png" alt="" class="di">
+  <img src="imgs/bo7.png" alt="" class="di">
+  
+</div>
+</div>
+<div id="mask"  style="filter: Alpha(opacity=30); -moz-opacity: 0.6; -khtml-opacity: 0.6;
+             opacity: 0.6;  background-color:#696969; width: 100%; height:1500px; z-index: 5px;
+             position: absolute; left: 0; top: 0; display: none; overflow: hidden;">
+         </div>
+         <div id="tcc" style="display:none;">
+         <button class="close" onclick="hidePop('tcc');">X<button>
+         <img src="img/rr11_02.jpg" class="s">
+         <button class="btn3" id="test" onclick="hidePop('tcc');">继续购物<button>
+         <button class="btn4">去购物车结算<button>
+         </div>
+		
+<script type="text/javascript">
+
+	var cover=document.getElementById('top1');
+    window.onscroll=function(){
+    	var st=document.documentElement.scrollTop || document.body.scrollTop;
+    	if(st>180){
+    		cover.style.position="fixed"
+    	}
+    	else{
+    		cover.style.position="static"
+    	}
+    }
+	
+
+
+	var img1 = document.getElementById('img1');
+	var img2 = document.getElementById('img2');
+	var slider = document.getElementById('slider');
+	var Bimg = document.getElementById('Bimg');
+	var box = document.getElementById('box');
+
+	img1.onmouseover = function(){
+		slider.style.display = 'block';
+		img2.style.display = 'block';
+	}
+
+	img1.onmouseout = function(){
+		slider.style.display = 'none';
+		img2.style.display = 'none';
+	}
+
+	img1.onmousemove = function(ev){
+		var oL = ev.clientX - box.offsetLeft - slider.offsetWidth/2;
+		var oT = ev.clientY - box.offsetTop - slider.offsetHeight/2;
+
+		var oMaxw = img1.offsetWidth - slider.offsetWidth;
+		var oMaxh = img1.offsetHeight - slider.offsetHeight;
+
+		oL = oL>oMaxw?oMaxw:oL<0?0:oL;
+		oT = oT>oMaxh?oMaxh:oT<0?0:oT;
+
+		slider.style.left = oL + 'px';
+		slider.style.top = oT + 'px';
+
+		Bimg.style.left = -(oL*2) + 'px';
+		Bimg.style.top = -(oT*2) + 'px';
+	}	
+		function fun(){
+			var ml=document.getElementById('l1');
+			var l=document.getElementById('ml1');
+			ml.setAttribute('src','imgs/duigou.png');
+			l.setAttribute('border','solid 1px #ff0754')
+			var ml2=document.getElementById('l2');
+			ml2.removeAttribute('src')
+		}
+		function fun1(){
+			var ml2=document.getElementById('l2');
+			ml2.setAttribute('src','imgs/duigou.png');
+			ml2.setAttribute('border','solid 1px #ff0754')
+			var ml=document.getElementById('l1');
+			ml.removeAttribute('src')
+		}
+
+	var num_jia = document.getElementById("num-jia");
+        var num_jian = document.getElementById("num-jian");
+        var input_num = document.getElementById("input-num");
+
+        num_jia.onclick = function() {
+        	if(input_num.value<5){
+        		input_num.value = parseInt(input_num.value) + 1;
+        	}
+            
+        }
+
+        num_jian.onclick = function() {
+
+            if(input_num.value <= 0) {
+                input_num.value = 0;
+            } else {
+
+                input_num.value = parseInt(input_num.value) - 1;
+            }
+
+        }
+        function getPosition() {
+             var top = document.documentElement.scrollTop;
+             var left = document.documentElement.scrollLeft;
+             var height = document.documentElement.clientHeight;
+             var width = document.documentElement.clientWidth;
+             //top=500;
+             left = 470;
+             //height=0;
+             width =550;
+             height=300;
+             top=200;
+             return { top: top, left: left, height: height, width: width };
+         }
+         //屏蔽输入，显示蒙板
+        function showMask(id) {
+             var obj = document.getElementById(id);
+             obj.style.width = document.body.clientWidth;
+             obj.style.height = document.body.clientHeight;
+             obj.style.display = "block";
+         }
+         //隐藏蒙板
+        function hideMask(id) {
+             document.getElementById(id).style.display = "none";
+         }
+         //显示登录
+        function showPop(id) {
+             showMask('mask');
+             var width = 400;  //弹出框的宽度
+            var height = 200;  //弹出框的高度
+            var obj = document.getElementById(id);
+             obj.style.display = "block";
+             obj.style.position = "fixed";
+             obj.style.zindex = "10";
+             obj.style.overflow = "hidden";
+             obj.style.width = width + "px";
+             obj.style.height = height + "px";
+             var Position = getPosition();
+             leftadd = (Position.width - width) / 2;
+             topadd = (Position.height - height) / 2;
+             obj.style.top = (Position.top + topadd) + "px";
+             obj.style.left = (Position.left + leftadd) + "px";
+             window.onscroll = function() {
+                 var Position = getPosition();
+                 obj.style.top = (Position.top + topadd) + "px";
+                 obj.style.left = (Position.left + leftadd) + "px";
+             };
+             
+         }
+         //隐含
+        function hidePop(id) {
+         hideMask('mask');
+             document.getElementById(id).style.display = "none";
+         } 	
+
+    var plus = document.getElementById("plus");
+		var i = document.getElementById("text").value;
+		var subtract = document.getElementById("subtract");
+		var img2=document.getElementById('img2');
+		var box = document.getElementById('box');
+		var slider = document.getElementById("slider");
+		function da(){
+			var img2=document.getElementById('img2');
+			var slider = document.getElementById("slider");
+			img1.onmouseover=function(){
+		 		slider.style.display="block";
+		 		img2.style.display="block";
+		 	}
+		 	img1.onmouseout=function(){
+		 		slider.style.display="none";
+		 		img2.style.display="none";
+		 	}	
+		 	img1.onmousemove=function(ev){
+		 		ev = ev || window.event;
+		 		var Bimg =img2.children[0];
+		 		slider.style.width = 120 + "px";
+				slider.style.height = 120 + "px";
+		 		var ol=ev.clientX-box.offsetLeft;
+		 		var ot=ev.clientY-box.offsetTop;
+		 		var oMaxw= img1.offsetWidth-slider.offsetWidth;
+		 		var oMaxh= img1.offsetHeight-slider.offsetHeight;
+		 		ol=ol>oMaxw?oMaxw:ol<0?0:ol;
+		 		ot=ot>oMaxh?oMaxh:ot<0?0:ot;
+		 		slider.style.left=ol-55+"px";
+		 		slider.style.top=ot-55+"px";
+		 		Bimg.style.left=-ol+"px";
+		 		Bimg.style.top=-ot+"px";
+		 	}
+		}
+		function add(){
+			var d1=document.getElementById('tu1');
+			var d2=document.getElementById('tu2');
+			d1.style.border="1px solid red";
+			d2.style.border="1px solid white";
+			var si=document.getElementById('img1');
+			var bi=document.getElementById('img2');
+			si.innerHTML='<img src="imgs/pp0.jpeg"><div id="slider"></div>';
+			da();
+			bi.innerHTML='<img src="imgs/pp0.jpeg ">';
+			da();
+		}
+		function add1(){
+			var d1=document.getElementById('tu1');
+			var d2=document.getElementById('tu2');
+			var si=document.getElementById('img1');
+			d1.style.border="1px solid white";
+			var bi=document.getElementById('img2');
+			d2.style.border="1px solid red";
+			si.innerHTML='<img src="imgs/pp1.jpeg"><div id="slider"></div>';
+			da();
+			bi.innerHTML='<img src="imgs/pp1.jpeg">';
+			da();
+		}
+
+</script>
+</body>
+</html>
