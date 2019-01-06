@@ -695,12 +695,18 @@ ul,
 	height: 55px;
 	float: left;
 }
-
+#dat{
+	height: 140px;
+	background-color: white;
+	width: 100%;
+	z-index: 1;
+}
 </style>
 </head>
 <body>
 
-	<div class="top">
+	<div id="dat">
+		<div class="top">
 		<p class="bang">帮5买，享帮帮</p>
 		<img src="imgs/-20ee0eded2c0fa8c.jpg" alt="" class="biao">
 		<a href=""><p class="zi">登录</p></a>
@@ -738,6 +744,7 @@ ul,
         <p class="d">奶粉</p>
         <p class="d">防晒霜</p>
         <p class="d1">伞</p>
+    </div>
     </div>
     </div>
     <div class="hei">
@@ -912,17 +919,17 @@ ul,
          </div>
          <div id="tcc" style="display:none;">
          <button class="close" onclick="hidePop('tcc');">X<button>
-         <img src="img/rr11_02.jpg" class="s">
+         <img src="imgs/rr11_02.jpg" >
          <button class="btn3" id="test" onclick="hidePop('tcc');">继续购物<button>
          <button class="btn4">去购物车结算<button>
          </div>
 		
 <script type="text/javascript">
 
-	var cover=document.getElementById('top1');
+	var cover=document.getElementById('dat');
     window.onscroll=function(){
     	var st=document.documentElement.scrollTop || document.body.scrollTop;
-    	if(st>180){
+    	if(st>140){
     		cover.style.position="fixed"
     	}
     	else{
@@ -1055,9 +1062,7 @@ ul,
              document.getElementById(id).style.display = "none";
          } 	
 
-    var plus = document.getElementById("plus");
-		var i = document.getElementById("text").value;
-		var subtract = document.getElementById("subtract");
+   
 		var img2=document.getElementById('img2');
 		var box = document.getElementById('box');
 		var slider = document.getElementById("slider");

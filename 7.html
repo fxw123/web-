@@ -578,11 +578,19 @@ height: 45px;
   margin-left: 15px;
   margin-top: 5px;
   display: none;}
+#dat{
+	height: 140px;
+	background-color: white;
+	width: 100%;
+	z-index: 1;
+}
 </style>
 </head>
 <body>
 <!-- <div id="top2"> -->
-	<div class="top">
+	
+	<div id="dat">
+		<div class="top">
 		<p class="bang">帮5买，享帮帮</p>
 		<img src="imgs/-20ee0eded2c0fa8c.jpg" alt="" class="biao">
 		<a href=""><p class="zi">登录</p></a>
@@ -620,6 +628,7 @@ height: 45px;
         <p class="d">奶粉</p>
         <p class="d">防晒霜</p>
         <p class="d1">伞</p>
+    </div>
     </div>
     </div>
     <div class="fxw-ul">
@@ -913,10 +922,10 @@ var area =document.getElementById('e2');
 
 
 
-	var cover=document.getElementById('top1');
+	var cover=document.getElementById('dat');
     window.onscroll=function(){
     	var st=document.documentElement.scrollTop || document.body.scrollTop;
-    	if(st>180){
+    	if(st>140){
     		cover.style.position="fixed"
     	}
     	else{
